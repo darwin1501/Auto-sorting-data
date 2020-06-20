@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Auto Sort
+        </title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link href="css/Chart.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/breakpoint.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <main>
+            <!-- bar chart -->
+            <div class="container">
+                <div class="card">
+                    <div class="card-container">
+                        <div class="autosort-header">
+                            <h2 class="chart-lbl">
+                                Bar Chart
+                            </h2>
+                            <div class="controls">
+                                <h2 class="chart-lbl">Chart Type</h2>
+                                <select name="chartType" id="chartType" onchange="updateChartType()">
+                                      <option value="bar">Vertical</option>
+                                      <option value="horizontalBar" selected="selected">Horizontal</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="divider">
+                        </div>
+                        <div class="bar-chart-container">
+                            <canvas class="bar-chart" id="bar">
+                            </canvas>
+                        </div>
+                        <!-- buttons start -->
+                        <div class="btn-grp-container">
+                        <div class="btn-grp input-group">
+                            <div class="box data-1">
+                                <h4>
+                                    Data 1
+                                </h4>
+                                <div class="btn-container">
+                                    <input class=" box button-minus" data-field="quantity" onclick="dataOneMinus()" type="button" value="-">
+                                        <input class=" box quantity-field" id="data-one" max="" name="quantity" step="1" type="number" value="1">
+                                            <input class=" box button-plus" data-field="quantity" onclick="dataOnePlus()" type="button" value="+">
+                                            </input>
+                                        </input>
+                                    </input>
+                                </div>
+                            </div>
+                            <div class="box data-2">
+                                <h4>
+                                    Data 2
+                                </h4>
+                                <div class="btn-container">
+                                    <input class="box button-minus" data-field="quantity" onclick="dataTwoMinus()" type="button" value="-">
+                                        <input class="box quantity-field" id="data-two" max="" name="quantity" step="1" type="number" value="1">
+                                            <input class="box button-plus" data-field="quantity" onclick="dataTwoPlus()" type="button" value="+">
+                                            </input>
+                                        </input>
+                                    </input>
+                                </div>
+                            </div>
+                            <div class="box data-3">
+                                <h4>
+                                    Data 3
+                                </h4>
+                                <div class="btn-container">
+                                    <input class="box button-minus" data-field="quantity" onclick="dataThreeMinus()" type="button" value="-">
+                                        <input class="box quantity-field" id="data-three" max="" name="quantity" step="1" type="number" value="1">
+                                            <input class="box button-plus" data-field="quantity" onclick="dataThreePlus()" type="button" value="+">
+                                            </input>
+                                        </input>
+                                    </input>
+                                </div>
+                            </div>
+                            <div class="box data-4">
+                                <h4>
+                                    Data 4
+                                </h4>
+                                <div class="box btn-container">
+                                    <input class="button-minus" data-field="quantity" onclick="dataFourMinus()" type="button" value="-">
+                                        <input class="box quantity-field" id="data-four" max="" name="quantity" step="1" type="number" value="1">
+                                            <input class="box button-plus" data-field="quantity" onclick="dataFourPlus()" type="button" value="+">
+                                            </input>
+                                        </input>
+                                    </input>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- buttons end -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="js/Chart.min.js">
+        </script>
+        <script src="js/logic.js">
+        </script>
+    </body>
+</html>
